@@ -5,5 +5,5 @@ st.title('🤖 Machine Leaning App')
 
 st.info('This is a machine Learning App!')
 
-df = pd.readcsv('https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/penguins_cleaned.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/dataprofessor/data/refs/heads/master/penguins_cleaned.csv')
 df
