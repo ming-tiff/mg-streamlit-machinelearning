@@ -43,6 +43,6 @@ data = {'island': island,
         'body_mass_g': body_mass_g,
          'gender': gender}
 input_df = pd.DataFrame(data, index=[0])
-input_peguins = pd.concat([input.df, X], axis=0)
-input_df
-  
+input_penguins = pd.concat([input.df, X], axis=0)
+input_penguins
+
