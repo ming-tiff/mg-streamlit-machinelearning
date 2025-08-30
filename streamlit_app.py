@@ -41,7 +41,7 @@ data = {'island': island,
         'bill_depth_mm': bill_depth_mm,
         'flipper_length_mm': flipper_length_mm,
         'body_mass_g': body_mass_g,
-         'sex', gender}
+         'gender', gender}
 input_df = pd.DataFrame(data, index=[0])
 input_peguin = pd.concat([input.df, X], axis=0)
 input_df
