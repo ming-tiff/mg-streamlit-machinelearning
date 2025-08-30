@@ -12,14 +12,14 @@ with st.expander('Data'):
   df
 
 with st.expander('Data X'):
-st.write('**X**')
-X = df.drop('species', axis=1)
-X
+  st.write('**X**')
+  X = df.drop('species', axis=1)
+  X
 
 with st.expander('Data y'):
-st.write('**y**')
-y = df.species
-y
+  st.write('**y**')
+  y = df.species
+  y
 
 
 with st.expander('Data visualization'):
