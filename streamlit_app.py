@@ -13,13 +13,13 @@ with st.expander('Data'):
 
 with st.expander('Data X'):
   st.write('**X**')
-  X = df.drop('species', axis=1)
-  X
+  X_raw = df.drop('species', axis=1)
+  X_raw
 
 with st.expander('Data y'):
   st.write('**y**')
-  y = df.species
-  y
+  y_raw = df.species
+  y_raw
 
 
 with st.expander('Data visualization'):
@@ -44,12 +44,17 @@ with st.sidebar:
         'body_mass_g': body_mass_g,
          'sex': gender}
   input_df = pd.DataFrame(data, index=[0])
-  input_penguins = pd.concat([input_df, X], axis=0)
+  input_penguins = pd.concat([input_df, X_raw], axis=0)
 
   # Encode
   encode = ['island', 'sex']
   df_penguins = pd.get_dummies(input_penguins, prefix=encode)
   input_row = df_penguins[:1]
+  
+  # Encode y
+  target_mapper = {'Adelie': 0,
+  										'Chinstrape': 1
+                    'Gentoo': 2}
 
 with st.expander('Input features'):
   st.write('**Input penguins**')       
@@ -58,3 +63,6 @@ with st.expander('Input features'):
   input_penguins
   st.write('Encoded input penguin')
   input_row
+  
+  
+  
