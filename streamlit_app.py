@@ -53,8 +53,8 @@ with st.sidebar:
   
   # Encode y
   target_mapper = {'Adelie': 0,
-  										'Chinstrape': 1
-                    'Gentoo': 2}
+  									 'Chinstrape': 1
+                   'Gentoo': 2}
 
 with st.expander('Input features'):
   st.write('**Input penguins**')       
